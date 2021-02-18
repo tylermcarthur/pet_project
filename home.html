@@ -9,46 +9,96 @@
     <link rel="stylesheet" href="stylesheet.css">
     <title>Embed Checker</title>
 </head>
-<body> 
+<body scroll='no' style="overflow:hidden"> 
+    <div class=" w-100 h-100 position-absolute" style="top: 0%; right: 0%;" id="gradient"></div>
+    <div class=" w-100 h-100 position-absolute" style="top: 0%; right: 0%;" id="bubbleHolder">
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+        <div class="bubble rounded-circle"></div>
+    </div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-pill shadow mb-5" >
             <div class="container-fluid">
                 <a class="nav-link disabled" href="index.html" id="home">Home</a>
+                <a class="nav-link" href="https://developers.google.com/youtube/iframe_api_reference" target="_blank"id="YouTube's-tutorial">YouTube's tutorial</a>
                 <div class="input-group w-50">
-                    <input type="search" class="form-control w-25" id="searchBox1">
-                    <button type="button" class="btn btn-secondary">
-                        <i class="fas fa-search"></i>
-                        Search
+                    <input type="search" class="form-control w-25" id="youtubeSearch">
+                    <button type="button" class="btn btn-secondary" id="youtubeSearchBtn">Search</button>
                 </div>
-                </button>
                 <button type="button" class="btn btn-success" id="donate">Donate</button>
             </div>
         </nav>
     </div>
-    <div class="input-group h-25 w-25" style="top: 0%; left: 42%;">
+    <div class="input-group h-25 w-50" style="top: 100%; left: 49%;">
         <div class="form-outline">
             <input type="search" id="textInput" class="form-control" placeholder="Paste the URL Here">
             <label for="textInput" class="form-label bg-transparent"></label>
         </div>
-        <button type="button" class="btn btn-outline-secondary h-75" id="testBtn">Test</button>
+        <button type="button" class="btn btn-outline-primary h-75" id="testBtn">Test</button>
     </div>
 
-    <div class="container container-fluid w-25 h-50 bg-dark position-absolute" style="top: 15%; right: 38%;" id="videoPlayer"> 
+    <div class="container container-fluid w-50 h-50 bg-dark position-absolute shadow-lg" style="top: 17%; right: 20.5%;" id="videoPlayer"> 
         <div id="player"></div>
     </div>
-    <div class= "container w-50 position-absolute overflow-auto" style="top: 70%; right: 28%; height: 20%;" id="copyTextContainer">
+    <div class= "container w-50 position-absolute overflow-auto" style="top: 73%; right: 20.5%; height: 20%;" id="copyTextContainer">
         <p class="text-start text-break fs-1"  id="textToCopy"></div>
-    <button type="button" class="btn btn-outline-primary position-absolute" style="bottom: 30%;right: 28%;" id="copyBtn">COPY</button>
-    <div></div> 
+    <button type="button" class="btn btn-outline-primary position-absolute" style="bottom: 28%;right: 20.5%;" id="copyBtn">COPY</button>
+    <div class="container w-25 position-absolute overflow-auto bg-white h-50 rounded" style="top: 17%; right: 73%;" id="rightTextBox">
+        <p class="text-center text-break text-uppercase fs-3">how to embed YouTube videos</p>
+        <p class="text-center text-break text-uppercase fs-5">instructions</p>
+        <span></span>
+        <ul class="list-group" id="instructions">
+            <li class="list-group-item mb-4 shadow-sm">Use the Search Box to check SEARCH for videos</li>
+            <li class="list-group-item mb-4 shadow-sm">Find a video you want to embed</li>
+            <li class="list-group-item mb-4 shadow-sm">Copy the URL from your browser and past it in the test box</li>
+            <li class="list-group-item mb-4 shadow-sm">If the video plays then click copy at the bottom</li>
+            <li class="list-group-item mb-4 shadow-sm">Open up a blank file and past the code you copied</li>
+            <li class="list-group-item mb-4 shadow-sm">Alter as you see fit</li>
+        </ul>
+    </div> 
 
 
 
     <script> 
-      
     </script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min"></script>
     <script src="js/bootstrap.js"></script>
     <script src="index.js"></script>
+    <script src="mover.js"></script>
 </body>
 </html>

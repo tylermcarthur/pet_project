@@ -3,6 +3,10 @@ var textbox = $('#textInput')
 var textboxBtn = $('#testBtn')
 var testcase = ''
 var copyBtn = $('#copyBtn')
+var youtubeSearch = $('#youtubeSearch')
+var youtubeSearchBtn = $('#youtubesearchBtn')
+var donateBtn = $('#donate')
+var myIframe = $('#myIframe')
 var player;
 
 function onYouTubeIframeAPIReady(testInput){
@@ -73,26 +77,39 @@ function copyToClipboard(text){
     }
 }
 
-
-
-
 function copy(){
     var copyText = $('#textToCopy').text();
 
     copyToClipboard(copyText)
 }
 
+function searchyoutube(){
+ if(youtubeSearch.val() != ''){
+   window.open(`https://www.youtube.com/results?search_query=${youtubeSearch.val()}`)
+ }
+}
 
 
+$(youtubeSearchBtn).on('click', searchyoutube) 
+$(youtubeSearch).keypress(function(e){
+  if(e.which == 13){
+    searchyoutube();
+  }
+})
 $(copyBtn).on('click', copy)
-
 $(textboxBtn).on('click', runTest)
-
 $(textbox).keypress(function(e){
     if(e.which == 13){
         runTest();
     }
 })
+$(donateBtn).on('click',function(){
+  window.open('paypal.html')
+})
+
+
+
+
 
 
 var exampleP1 = 
